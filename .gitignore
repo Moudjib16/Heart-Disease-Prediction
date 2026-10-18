@@ -7,6 +7,8 @@ data/processed/*
 !data/processed/*.json
 !data/processed/figures/
 !data/processed/figures/*.png
-models/
+models/*
+!models/*.pkl
+!models/threshold.json
 mlruns/
 .streamlit/secrets.toml
