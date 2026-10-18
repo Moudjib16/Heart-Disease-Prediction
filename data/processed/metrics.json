@@ -1,0 +1,45 @@
+{
+  "test_set": {
+    "n": 184,
+    "prevalence": 0.5543478260869565
+  },
+  "default_threshold": 0.5,
+  "default_metrics": {
+    "accuracy": 0.8043478260869565,
+    "precision": 0.7946428571428571,
+    "recall": 0.8725490196078431,
+    "f1": 0.8317757009345794,
+    "roc_auc": 0.9074605451936872
+  },
+  "chosen_threshold": 0.4,
+  "metrics_at_chosen_threshold": {
+    "accuracy": 0.7989130434782609,
+    "precision": 0.751937984496124,
+    "recall": 0.9509803921568627,
+    "f1": 0.8398268398268398,
+    "roc_auc": 0.9074605451936872
+  },
+  "threshold_sweep": {
+    "0.3": {
+      "accuracy": 0.7011,
+      "precision": 0.6516,
+      "recall": 0.9902,
+      "f1": 0.786,
+      "roc_auc": 0.9075
+    },
+    "0.4": {
+      "accuracy": 0.7989,
+      "precision": 0.7519,
+      "recall": 0.951,
+      "f1": 0.8398,
+      "roc_auc": 0.9075
+    },
+    "0.5": {
+      "accuracy": 0.8043,
+      "precision": 0.7946,
+      "recall": 0.8725,
+      "f1": 0.8318,
+      "roc_auc": 0.9075
+    }
+  }
+}
