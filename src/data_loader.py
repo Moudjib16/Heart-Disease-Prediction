@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
@@ -49,7 +50,7 @@ def clean_heart_data(df: pd.DataFrame) -> pd.DataFrame:
 
     out = out.drop(columns=[c for c in ID_COLUMNS if c in out.columns])
 
-    out[IMPLAUSIBLE_ZERO] = out[IMPLAUSIBLE_ZERO].replace(0, pd.NA)
+    out[IMPLAUSIBLE_ZERO] = out[IMPLAUSIBLE_ZERO].replace(0, np.nan)
 
     out[TARGET_COL] = (out[TARGET_SOURCE] > 0).astype(int)
     out = out.drop(columns=[TARGET_SOURCE])
