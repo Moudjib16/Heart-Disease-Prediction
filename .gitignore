@@ -1,7 +1,9 @@
 venv/
 __pycache__/
 .ipynb_checkpoints/
-data/
+data/processed/
+data/raw/*
+!data/raw/heart_disease_uci.csv
 models/
 mlruns/
 .streamlit/secrets.toml
