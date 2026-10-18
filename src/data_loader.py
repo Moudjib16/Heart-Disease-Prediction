@@ -13,6 +13,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 RAW_PATH = Path("data/raw/heart_disease_uci.csv")
 
@@ -63,6 +64,23 @@ def get_features_target(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
     X = df.drop(columns=[TARGET_COL])
     y = df[TARGET_COL]
     return X, y
+
+
+def split_data(
+    df: pd.DataFrame,
+    test_size: float = 0.2,
+    random_state: int = RANDOM_STATE,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
+    """Return a stratified train/test split of a cleaned frame.
+
+    Stratification preserves the disease prevalence in both folds, which
+    matters on a small (~918-row) dataset; ``random_state`` makes the split
+    reproducible. Returns ``X_train, X_test, y_train, y_test``.
+    """
+    X, y = get_features_target(df)
+    return train_test_split(
+        X, y, test_size=test_size, stratify=y, random_state=random_state
+    )
 
 
 def load_clean(path: str | Path = RAW_PATH) -> pd.DataFrame:
