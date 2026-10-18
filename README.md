@@ -5,6 +5,9 @@
 ![XGBoost](https://img.shields.io/badge/model-XGBoost-3C9C6B)
 ![Explainable](https://img.shields.io/badge/explainable-SHAP-8A2BE2)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![Live demo](https://img.shields.io/badge/%E2%96%B6%20Live%20demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://heart-disease-prediction-k4mpjl9fct4svfm5ggrpwb.streamlit.app/)
+
+**🔴 Live demo:** <https://heart-disease-prediction-k4mpjl9fct4svfm5ggrpwb.streamlit.app/>
 
 An end-to-end, **explainable** clinical-risk pipeline: raw UCI data → cleaning →
 preprocessing → tuned XGBoost → SHAP explainability → Streamlit app → Docker.
